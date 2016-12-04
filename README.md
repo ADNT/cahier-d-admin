@@ -1,2 +1,4 @@
-# cahier-d-admin
-Cahier de l'administrateur
+informations en vrac pour la gestion d
+'un parc informatique avec des logiciels 
+libres.
+
