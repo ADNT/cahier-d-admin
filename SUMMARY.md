@@ -2,5 +2,8 @@
 
 * [Introduction](README.md)
 * [Réseau](NETWORK.md)
-* [configuration samba](samba4.md)
-* [configuration esxi](esxi.md)
+* Système
+  * samba4
+    * [configuration samba](samba4.md)
+  * ESXI
+    * [configuration esxi](esxi.md)
