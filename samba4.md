@@ -1,11 +1,12 @@
-#samba 4 
+#samba 4
+##Créer un controller de domaine
 Créer un serveur active directory avec samba 4. 
  * nom du contrôleur : dc1
  * nom du domaine   : mydomain.intra
  * domaine NT       : mydomain
  * IP du contrôleur : 192.168.1.10
 
-## installation et configuration
+### installation et configuration
 
 
 
@@ -24,7 +25,7 @@ localhost#>samba-tool domain provision
 localhost#>samba-tool domain level raise --domain-level 2008_R2 --forest-level 2008_R2
 ```
 
-## Configuration du serveur NTP
+### Configuration du serveur NTP
 
 ```bash
   apt-get install ntpdate
@@ -97,7 +98,7 @@ samba_dnsupdate --use-samba-tool
 Après installation vous pouvez configurer le système pour qu'il utilise l'adresse de loopback.
 
 
-### répliquer les sysvol
+#### répliquer les sysvol
 
 Actuellement samba ne supporte pas la réplication des sysvol alors la solution actuelle
 et de mettre en place une tache cron qui va répliquer les données entre les serveurs.
@@ -108,7 +109,7 @@ samba-tool ntacl sysvolcheck
 samba-tool ntacl sysvolreset
 ```
 
-### Imposible de pinger le domain *.local
+## Imposible de pinger le domain *.local
 
 Les domaines en .local font partie de la norme avahi et quand votre
 système reçoit une demande de résolution il utilise des requêtes
